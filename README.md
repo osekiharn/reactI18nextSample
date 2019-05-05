@@ -43,6 +43,13 @@ i18n.init({
 })
 ```
 
+### Initialize
+
+- debug: <boolean> very useful during development, It logs to console all the information on i18next state. production では false にする
+- lng:  initial language to use.
+- resources: `init({})`内にtranslationを書けるけど、後述するように外部ファイル化することになるでしょう。
+
+
 `index.js`
 ```js
 import { I18nextProvider } from 'react-i18next'
@@ -87,11 +94,7 @@ export default connect(
 )(withNamespaces()(App))
 ```
 
-### Initialize
 
-- debug: <boolean> very useful during development, It logs to console all the information on i18next state. production では false にする
-- lng:  initial language to use.
-- resources: `init({})`内にtranslationを書けるけど、後述するように外部ファイル化することになるでしょう。
 
 
 ### Dynamically fetching user language
@@ -106,8 +109,6 @@ yarn add i18next-browser-languagedetector
 ```js
 import LanguageDetector from 'i18next-browser-languagedetector';
 ```
-
-
 
 ### Loading translation files from external location
 
